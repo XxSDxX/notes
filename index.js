@@ -1,2 +1,1 @@
-import { app } from "./src/app/index.js";
-console.log('starting project');
+import { test } from "./src/tests/test.js";
