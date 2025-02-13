@@ -5,7 +5,7 @@ import { CreateNoteUseCase } from "../usecases/CreateNoteUseCase.js";
 import { SaveNoteUseCase } from "../usecases/SaveNoteUseCase.js";
 
 
-const noteDriverJson = new NoteDriverJson('../../database/notes.json');
+const noteDriverJson = new NoteDriverJson('./database/notes.json');
 const noteRepository = new NoteRepository(noteDriverJson);
 
 const createNoteUseCase = new CreateNoteUseCase();

@@ -21,7 +21,9 @@ export class NoteDriverJson {
 
     getAll() {
         try {
-            return JSON.parse(fs.readFileSync(this.path, {encoding: 'utf-8'}));
+            let filedata = fs.readFileSync(this.path, {encoding: 'utf-8'});
+            if(filedata == '') filedata = JSON.stringify([])
+            return JSON.parse(filedata);
         } catch (error) {
             throw new Error('error during getting all notes in NoteDriverJson');
         }
