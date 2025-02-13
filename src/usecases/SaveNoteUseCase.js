@@ -1,9 +1,15 @@
 export class SaveNoteUseCase {
-    constructor(repository) {
+    constructor(repository, noteValidatorService) {
         this.repository = repository;
+        this.noteValidatorService = noteValidatorService;
     }
 
-    execute(note) {
+    async execute(note) {
+        const noteIsOk = await this.noteValidatorService.validate(note);
+        if(!noteIsOk) {
+            console.log('something wrong with note', note);
+            return;
+        }
         this.repository.save(note)
     }
 }

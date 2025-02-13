@@ -3,9 +3,13 @@ export class NoteRepository {
         this.driver = driver;
     }
 
-    save(note) {
+    async save(note) {
 
         // здесь можно адаптировать данные (note)
-        this.driver.save(note)
+        await this.driver.save(note)
+    }
+
+    async getAll() {
+        return await this.driver.getAll();
     }
 }
