@@ -9,7 +9,7 @@ export class NoteRepository {
         await this.driver.save(note)
     }
 
-    async getAll() {
-        return await this.driver.getAll();
+    getAll() {
+        return this.driver.getAll();
     }
 }

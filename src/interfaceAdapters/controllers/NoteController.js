@@ -1,7 +1,8 @@
 export class NoteController {
-    constructor(createNoteUseCase, saveNoteUseCase) {
+    constructor(createNoteUseCase, saveNoteUseCase, getAllNotesUseCase) {
         this.createNoteUseCase = createNoteUseCase;
         this.saveNoteUseCase = saveNoteUseCase;
+        this.getAllNotesUseCase = getAllNotesUseCase;
     }
 
     createNote(title, content, date, id) {
@@ -10,5 +11,9 @@ export class NoteController {
 
     saveNote(note) {
         this.saveNoteUseCase.execute(note)
+    }
+
+    getNotes() {
+        return this.getAllNotesUseCase.execute();
     }
 }

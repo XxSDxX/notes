@@ -17,6 +17,7 @@ const noteValidatorService = new NoteValidatorService(noteRepository);
 const createNoteUseCase = new CreateNoteUseCase();
 const saveNoteUseCase = new SaveNoteUseCase(noteRepository, noteValidatorService)
 
+// controllers
 const noteController = new NoteController(createNoteUseCase, saveNoteUseCase);
 
 // the test

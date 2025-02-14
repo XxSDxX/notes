@@ -1,1 +1,1 @@
-import { test } from "./src/tests/test.js";
+import { getAllNotesTest } from "./src/tests/getAllNotesTest.js";
