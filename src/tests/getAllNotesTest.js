@@ -1,4 +1,4 @@
-import { NoteDriverJson } from "../frameworksDrivers/NoteDriver.js";
+import { NoteDriverJson } from "../frameworksDrivers/drivers/NoteDriver.js";
 import { NoteRepository } from "../interfaceAdapters/repositories/NoteRepository.js";
 import { NoteController } from "../interfaceAdapters/controllers/NoteController.js";
 import { GetAllNotesUseCase } from "../usecases/GetAllNotes.js";
